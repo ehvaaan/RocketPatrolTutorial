@@ -62,7 +62,19 @@ class Play extends Phaser.Scene {
             },
             fixedWidth: 100
         }
-
+        
+        let scoreConfig2 = {
+            fontFamily: 'Courier',
+            fontSize: '24px',
+            backgroundColor: '#F3B141',
+            color: '#843605',
+            align: 'right',
+            padding: {
+                top: 5,
+                bottom: 5,
+            },
+            fixedWidth: 0
+        }
         
         this.scoreLeft = this.add.text(69, 54, this.p1score, scoreConfig);
 
@@ -73,7 +85,7 @@ class Play extends Phaser.Scene {
         scoreConfig.fixedWidth = 0;
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
-            this.add.text(game.config.width/3, game.config.height/2 + 64, '(F)ire to Restart or ← to return to the Menu', scoreConfig).setOrigin(0.5);
+            this.add.text(game.config.width/2, game.config.height/2 + 64, '(F)ire to Restart or ← to return to the Menu', scoreConfig2).setOrigin(0.5);
             this.gameOver = true;
         }, null, this);
 
