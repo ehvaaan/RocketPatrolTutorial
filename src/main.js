@@ -1,4 +1,4 @@
-//create game configuration object// 
+// create game configuration object// 
 let config = {
     type: Phaser.CANVAS,
     width: 640,
@@ -6,13 +6,17 @@ let config = {
     scene: [ Menu, Play ],
 };
 
-//create main game object//
+// create main game object//
 let game = new Phaser.Game(config);
-
-//reserve some keyboard
+// define game settings
+game.settings = {
+    spaceshipSpeed: 3,
+    gameTimer: 60000
+}
+// reserve some keyboard
 let keyF, keyLEFT, keyRIGHT;
 
 
 
 
-//console.log("Hello whirled!");//
+// console.log("Hello whirled!");//
