@@ -22,7 +22,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
                 this.x += 2;
             }
         }
-
+        
         // fire button
         if(Phaser.Input.Keyboard.JustDown(keyF) && !this.isFiring) {
             this.isFiring = true;
@@ -34,7 +34,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
         if(this.isFiring && this.y >= 108) {
             this.y -= 2;
         }
-
+        
         // reset on miss - if this was greater than, it would constantly reset
         if(this.y <= 108) {
             this.isFiring = false;
