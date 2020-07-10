@@ -6,15 +6,20 @@ class Spaceship extends Phaser.GameObjects.Sprite {
         // add object to existing scene
         scene.add.existing(this);
 
-
         // store pointValue
         this.points = pointValue;
+    }
+
+    isSmallShip() {
+        return false;
     }
 
     update() {
         // move spaceship left
         this.x -= game.settings.spaceshipSpeed;
-
+        //this.ship04 -= game.settings.spaceshipSpeed1;
+        //this.spacecraft -= game.settings.spaceshipSpeed*1.75;
+        
         // move spaceship right
 
 

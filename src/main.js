@@ -10,13 +10,16 @@ let config = {
 let game = new Phaser.Game(config);
 // define game settings
 game.settings = {
-    spaceshipSpeed: 3,
+    spaceshipSpeed: 3, 
+    //spaceshipSpeed2: spaceshipSpeed*2,
     gameTimer: 60000
 }
 // reserve some keyboard
 let keyF, keyLEFT, keyRIGHT;
 
-
+let highScore;
+let level;
+let newHighScore = false;
 
 
 // console.log("Hello whirled!");//
